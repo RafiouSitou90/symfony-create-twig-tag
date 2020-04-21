@@ -41,7 +41,7 @@ class TwigCacheExtension extends AbstractExtension
      * @return string
      * @throws Exception
      */
-    private function getCacheKey ($item): string
+    public function getCacheKey ($item): string
     {
         if (empty($item)) {
             throw new Exception('Invalid cache key');

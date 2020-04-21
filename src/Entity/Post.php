@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use App\Twig\Cache\CacheableInterface;
 use DateTime;
 use DateTimeInterface;
 use DateTimeZone;
@@ -13,7 +14,7 @@ use Exception;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PostRepository")
  */
-class Post
+class Post implements CacheableInterface
 {
     /**
      * @var string
