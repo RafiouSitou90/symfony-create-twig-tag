@@ -1,0 +1,12 @@
+{% extends 'base.html.Twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>List of {{ posts | length }} articles </h1>
+        {% for post in posts %}
+            {% include 'post/_card.html.twig' with {post: post} only %}
+        {% endfor %}
+    </div>
+{% endblock %}
